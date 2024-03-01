@@ -2,8 +2,6 @@ package response;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import request.json.Login;
 import tools.JSONObject;
 
 /**
@@ -16,7 +14,12 @@ public abstract class AResponseFGW14IP extends JSONObject
 
 	
 	
-	
+	/**
+	 * Convert the JSON String to the corresponding class/object
+	 * @param jsonString
+	 * @param responseClass
+	 * @return the object from the json string
+	 */
 	public static <T extends AResponseFGW14IP> T getObjectFromJSONString(String jsonString, Class<T> responseClass)
 	{
 		ObjectMapper objectMapper = new ObjectMapper();

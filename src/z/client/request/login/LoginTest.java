@@ -12,6 +12,11 @@ import request.login.LoginRequest;
 import response.AResponseFGW14IP;
 import response.login.LoginResponse;
 
+/**
+ * Sample class to test the connection with real gateway
+ * @author m.goerlich
+ *
+ */
 public class LoginTest 
 {
 	public static void main(String[] args) throws IOException
@@ -30,7 +35,11 @@ public class LoginTest
 	           
             String jsonString = EntityUtils.toString(entity1);
             LoginResponse loginResponse = AResponseFGW14IP.getObjectFromJSONString(jsonString, LoginResponse.class);
-            	
+            if(loginResponse != null)
+            {
+            	Connection.getInstance().setCurrentAccessToken(loginResponse.getAccessToken());
+            }
+            
             System.out.println("loginResponse " + loginResponse.getAccessToken());
             
 			

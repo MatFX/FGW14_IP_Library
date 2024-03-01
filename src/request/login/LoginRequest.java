@@ -25,7 +25,7 @@ public class LoginRequest extends ARequest implements ISendJSONObject
 
 	@Override
 	public String getFullRequestString() {
-		StringBuilder sb = new StringBuilder(Connection.getDestinationIP());
+		StringBuilder sb = new StringBuilder(Connection.getInstance().getDestinationIP());
 		sb.append(this.apiName);
 		System.out.println("anfrage: "+sb.toString());
 		return sb.toString();
@@ -35,7 +35,6 @@ public class LoginRequest extends ARequest implements ISendJSONObject
 	public HttpUriRequestBase getRequest() {
 	    HttpPost httpPost = new HttpPost(this.getFullRequestString());
 	    
-	    //get and set the json body
 	    try
 	    {
 	    	httpPost.setHeader("Accept", "application/json");
