@@ -7,6 +7,11 @@ import request.ARequest;
 import response.AResponseFGW14IP;
 import response.password.ReadPasswordResponse;
 
+/**
+ * only information about the state of password; configured or not configured
+ * @author m.goerlich
+ *
+ */
 public class ReadPasswordRequest extends ARequest 
 {
 	public ReadPasswordRequest() 

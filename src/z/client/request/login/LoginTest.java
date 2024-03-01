@@ -34,7 +34,8 @@ public class LoginTest
 		    System.out.println("entity " + entity1.getContentType());
 	           
             String jsonString = EntityUtils.toString(entity1);
-            LoginResponse loginResponse = AResponseFGW14IP.getObjectFromJSONString(jsonString, LoginResponse.class);
+            //TODO im LoginResposne die weitere Verarbeitung über eine allgemeine Methode hinterlegen?
+            LoginResponse loginResponse = (LoginResponse) AResponseFGW14IP.getObjectFromJSONString(jsonString, login.getResponseClass());
             if(loginResponse != null)
             {
             	Connection.getInstance().setCurrentAccessToken(loginResponse.getAccessToken());
