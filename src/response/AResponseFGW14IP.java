@@ -1,5 +1,7 @@
 package response;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import tools.JSONObject;
@@ -39,6 +41,12 @@ public abstract class AResponseFGW14IP extends JSONObject
 		return null;
 		
 		
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return ReflectionToStringBuilder.toString(this);
 	}
 
 }

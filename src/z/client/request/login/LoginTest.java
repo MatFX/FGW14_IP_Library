@@ -40,9 +40,7 @@ public class LoginTest
             {
             	Connection.getInstance().setCurrentAccessToken(loginResponse.getAccessToken());
             }
-            
-            System.out.println("loginResponse " + loginResponse.getAccessToken());
-            
+            System.out.println("loginResponse " + loginResponse.toString());
 			
 		} 
 		catch (Exception e) 

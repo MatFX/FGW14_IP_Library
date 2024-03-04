@@ -1,4 +1,4 @@
-package z.client.request.password;
+package z.client.request.system.gateway;
 
 import java.io.IOException;
 
@@ -7,32 +7,34 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 
-import request.password.ReadPasswordRequest;
+import request.system.gateway.SetGatewayNameRequest;
 import response.AResponseFGW14IP;
-import response.password.ReadPasswordResponse;
+import response.system.gateway.ReadGatewayResponse;
 
-public class ReadPasswordTest 
+public class SetGatewayNameTest 
 {
 	
 	public static void main(String[] args) throws IOException
 	{
-		ReadPasswordRequest readPasswordRequest = new ReadPasswordRequest();
+		SetGatewayNameRequest setGatewayName = new SetGatewayNameRequest();
+		setGatewayName.setGatewayName("My_FGW14-IP");
 		
 		CloseableHttpClient client = HttpClients.createDefault();
-		client.execute(readPasswordRequest.getRequest(), response ->{
+		client.execute(setGatewayName.getRequest(), response ->{
 			
 			
 		try 
 		{
 			final HttpEntity entity1 = response.getEntity();
 		    System.out.println("entity " + entity1.getContentType());
-	           
+	        
+		    
+		    
             String jsonString = EntityUtils.toString(entity1);
-            ReadPasswordResponse readPasswordResponse = (ReadPasswordResponse) AResponseFGW14IP.getObjectFromJSONString(jsonString, readPasswordRequest.getResponseClass());
-            if(readPasswordResponse != null)
+            ReadGatewayResponse readGatewayResponse = (ReadGatewayResponse) AResponseFGW14IP.getObjectFromJSONString(jsonString, setGatewayName.getResponseClass());
+            if(readGatewayResponse != null)
             {
-            	System.out.println("Password? " + readPasswordResponse.toString());
-            	//Connection.getInstance().setCurrentAccessToken(loginResponse.getAccessToken());
+            	System.out.println("Gateway? " + readGatewayResponse.toString());
             }
             
             
@@ -45,7 +47,7 @@ public class ReadPasswordTest
 		}
 		return null;
      });
-		
+	
 		
 	}
 	
