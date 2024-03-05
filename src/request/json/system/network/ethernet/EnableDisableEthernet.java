@@ -1,6 +1,8 @@
-package request.json.system.network;
+package request.json.system.network.ethernet;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
 
 public class EnableDisableEthernet extends AEthernet
 {

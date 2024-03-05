@@ -1,8 +1,8 @@
-package request.json.system.network;
+package request.json.system.network.wlan.station;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class SetStaticEthernetIP extends AEthernet
+public class SetStaticWlanIp extends ASubStation
 {
 	@JsonProperty("ip")
 	private String ip;
@@ -59,5 +59,4 @@ public class SetStaticEthernetIP extends AEthernet
 		this.dnsBackup = dnsBackup;
 	}
 
-	
 }
