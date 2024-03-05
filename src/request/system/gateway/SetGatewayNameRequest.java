@@ -7,7 +7,7 @@ import org.apache.hc.core5.http.io.entity.StringEntity;
 import gateway.Connection;
 import request.ARequest;
 import request.interfaces.ISendJSONObject;
-import request.json.SetGatewayName;
+import request.json.system.gateway.SetGatewayName;
 import response.AResponseFGW14IP;
 import response.system.gateway.ReadGatewayResponse;
 import tools.JSONObject;

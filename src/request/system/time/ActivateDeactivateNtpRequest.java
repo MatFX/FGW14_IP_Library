@@ -8,8 +8,7 @@ import gateway.Connection;
 import request.ARequest;
 import request.interfaces.ISendJSONObject;
 import request.json.ActivateDeactivateNtpState;
-import request.json.ActivateDeactivateNtpState.NTP_STATE;
-import request.system.ReadSystemRequest;
+import request.json.states.Activator;
 import response.AResponseFGW14IP;
 import response.system.time.ReadTimeResponse;
 import tools.JSONObject;
@@ -17,7 +16,7 @@ import tools.JSONObject;
 public class ActivateDeactivateNtpRequest extends ReadTimeRequest implements ISendJSONObject
 {
 	
-	private NTP_STATE ntpState = NTP_STATE.ACTIVATE;
+	private Activator ntpState = Activator.ACTIVATE;
 	
 	public ActivateDeactivateNtpRequest()
 	{
@@ -62,7 +61,7 @@ public class ActivateDeactivateNtpRequest extends ReadTimeRequest implements ISe
 	}
 
 
-	public void setNtpState(NTP_STATE ntpState) {
+	public void setNtpState(Activator ntpState) {
 		this.ntpState = ntpState;
 	}
 

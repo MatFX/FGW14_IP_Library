@@ -7,7 +7,7 @@ import org.apache.hc.core5.http.io.entity.StringEntity;
 import gateway.Connection;
 import request.ARequest;
 import request.interfaces.ISendJSONObject;
-import request.json.TimeZone;
+import request.json.system.time.TimeZone;
 import response.AResponseFGW14IP;
 import response.system.time.ReadTimeResponse;
 import tools.JSONObject;
