@@ -24,8 +24,16 @@ public abstract class AResponseFGW14IP extends JSONObject
 	 */
 	public static <T extends AResponseFGW14IP> T getObjectFromJSONString(String jsonString, Class<T> responseClass)
 	{
+		return getObjectFromJSONString(jsonString, responseClass, true);
+	}
+
+	public static <T extends AResponseFGW14IP> T getObjectFromJSONString(String jsonString, Class<T> responseClass, boolean isUnwrapRootValue)
+	{
+		
 		ObjectMapper objectMapper = new ObjectMapper();
-		objectMapper.enable(DeserializationFeature.UNWRAP_ROOT_VALUE);
+		//most cases the feature must be used
+		if(isUnwrapRootValue)
+			objectMapper.enable(DeserializationFeature.UNWRAP_ROOT_VALUE);
 		
 		try 
 		{
@@ -41,7 +49,11 @@ public abstract class AResponseFGW14IP extends JSONObject
 		return null;
 		
 		
+		
 	}
+	
+	
+	
 	
 	@Override
 	public String toString() 
