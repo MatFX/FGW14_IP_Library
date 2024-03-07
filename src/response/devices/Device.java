@@ -2,9 +2,10 @@ package response.devices;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 import response.AResponseFGW14IP;
 
-public class Devices extends AResponseFGW14IP
+public class Device extends AResponseFGW14IP
 {
 
 	@JsonProperty("deviceType") 
@@ -18,6 +19,7 @@ public class Devices extends AResponseFGW14IP
 	
 	@JsonProperty("forwardOnMqtt") 
 	private boolean forwardOnMqtt;
+	
 	
 	public String getDeviceType() {
 		return deviceType;

@@ -1,20 +1,18 @@
 package response.devices;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+
 
 import response.AResponseFGW14IP;
-//@JsonRootName("devices") 
+
 public class ReadDevicesResponse extends AResponseFGW14IP 
 {
-	//@JsonProperty("devices")
-	private Devices[] devices;
+	private Device[] devices;
 
-	public Devices[] getDevices() {
+	public Device[] getDevices() {
 		return devices;
 	}
 
-	public void setDevices(Devices[] devices) {
+	public void setDevices(Device[] devices) {
 		this.devices = devices;
 	}
 
