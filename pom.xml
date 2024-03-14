@@ -1,10 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>FGW14_IP</groupId>
-  <artifactId>FGW14_IP</artifactId>
-  <version>0.0.9-SNAPSHOT</version>
-  <name>FGW14_IP</name>
-  <description>API FGW14 IP</description>
+  <groupId>eu.matfx</groupId>
+  <artifactId>fgw14ip</artifactId>
+  <version>0.0.9</version>
+  <name>FGW14IP_Lib</name>
+  <description>Java implementation of the API FGW14 IP</description>
+    <licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+   </licenses>
+   
+   <scm>
+    	<connection>scm:git:git://github.com/MatFX/FGW14_IP_Library.git</connection>
+ 		<developerConnection>scm:git:ssh://github.com:MatFX/FGW14_IP_Library.git</developerConnection>
+  		<url>http://github.com/MatFX/FGW14_IP_Library.git</url>
+   </scm>
+   <developers>
+		<developer>
+			<id>MatFx</id>
+			<name>Matthias Goerlich</name>
+			<email></email>
+		</developer>
+   </developers>
+  
   
   <dependencies>
  	<dependency>
