@@ -1,7 +1,6 @@
 # FGW14_IP_Library
 ![Maven Central Version](https://img.shields.io/maven-central/v/eu.matfx/fgw14ip?style=plastic&color=00b300)
 
-
 Java API implementation of the Eltako FGW14WL-IP gateway.
 The API and product description will you find at the [product page](https://bit.ly/43ge0Lo) from the company Eltako.
 
