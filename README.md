@@ -3,7 +3,7 @@
 
 
 Java API implementation of the Eltako FGW14WL-IP gateway.
-The API and product description will you find at the [product page](https://bit.ly/43ge0Lo) from the company Eltako.
+The API and product description will you find at the [product page](https://www.eltako.com/de/catalog/products/895/fgw14wl-ip/) from the company Eltako.
 
 In this project you will find different packages, the main content is at
 
