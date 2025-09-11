@@ -48,9 +48,6 @@ public abstract class AResponseFGW14IP extends JSONObject
 		} 
 		
 		return null;
-		
-		
-		
 	}
 	
 	
